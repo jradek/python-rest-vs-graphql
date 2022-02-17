@@ -8,7 +8,7 @@ Here's the link to the video: https://youtu.be/7ccdWqGgHaM.
 
 - startup
     ```
-    cd rest
+    cd graphql
     FLASK_APP=app.py flask run
     ```
 - or in VSCODE
