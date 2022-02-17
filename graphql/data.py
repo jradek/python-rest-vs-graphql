@@ -18,13 +18,13 @@ class Author(TypedDict):
     name: str
 
 
-BLOGS: dict[int, Blog] = {
+BLOGS = {
     1: {"id": 1, "title": "Blog 1", "author_id": 1, "content": "Content 1"},
     2: {"id": 2, "title": "Blog 2", "author_id": 2, "content": "Content 2"},
     3: {"id": 3, "title": "Blog 3", "author_id": 3, "content": "Content 3"},
 }
 
-AUTHORS: dict[int, Author] = {
+AUTHORS = {
     1: {"id": 1, "name": "Author 1"},
     2: {"id": 2, "name": "Author 2"},
     3: {"id": 3, "name": "Author 3"},
@@ -35,7 +35,7 @@ class NotFoundError(Exception):
     pass
 
 
-def all_blogs() -> list[Blog]:
+def all_blogs(): # -> list[Blog]:
     return list(BLOGS.values())
 
 
@@ -54,7 +54,7 @@ def update_blog(blog_id: int, payload: BlogPayload) -> Blog:
     return blog
 
 
-def all_authors() -> list[Author]:
+def all_authors(): # -> list[Author]:
     return list(AUTHORS.values())
 
 

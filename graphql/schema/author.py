@@ -12,7 +12,7 @@ AUTHOR_TYPEDEF = """
 
 
 @query.field("authors")
-def resolve_authors(_, info: GraphQLResolveInfo) -> list[Author]:
+def resolve_authors(_, info: GraphQLResolveInfo):
     return all_authors()
 
 

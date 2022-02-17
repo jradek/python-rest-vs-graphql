@@ -28,7 +28,7 @@ blog_query = ObjectType("Blog")
 
 
 @query.field("blogs")
-def resolve_blogs(_, info: GraphQLResolveInfo) -> list[Blog]:
+def resolve_blogs(_, info: GraphQLResolveInfo):
     return all_blogs()
 
 
@@ -45,6 +45,7 @@ def resolve_update_blog(
 
 
 @blog_query.field("author")
-def resolve_blog_author(blog: dict[str, Any], info: GraphQLResolveInfo):
+def resolve_blog_author(blog, # : dict[str, Any]
+                        info: GraphQLResolveInfo):
     print(blog)
     return get_author(blog["author_id"])

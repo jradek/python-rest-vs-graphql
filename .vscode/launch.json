@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Graphql",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/graphql",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "app.py",
+                "FLASK_ENV": "development",
+                "FLASK_DEBUG": "1"
+            },
+            "args": [
+                "run",
+                //"--no-debugger"
+                //"--no-reload"
+            ],
+            "jinja": true
+        },
+        {
+            "name": "Rest",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/rest",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "app.py",
+                "FLASK_ENV": "development",
+                "FLASK_DEBUG": "1"
+            },
+            "args": [
+                "run",
+                //"--no-debugger"
+                //"--no-reload"
+            ],
+            "jinja": true
+        }
+    ]
+}
